@@ -1,0 +1,283 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <style>
+        h1 {
+            font-size: 2rem;
+            margin: 0;
+        }
+
+        #about {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        #skills {
+            background-color: #f0f8ff;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        #projects {
+            background-color: #f5fffa;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        #contact {
+            background-color:lightcyan;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        footer {
+            background-color: #6565a1; 
+            padding: 10px;
+            border-radius: 8px;
+        }
+
+        #about img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        #projects .portfolio_P img,
+        #projects .Ecom_P img,
+        #projects .Amazon_Clone_P img,
+        #projects .Expense_P img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        #contact input,
+        #contact textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            border: 1px solid #827f7f;
+        }
+
+        #contact p {
+            margin-top: 15px;
+        }
+
+        .social-Links i {
+            font-size: 2rem;
+            margin-right: 15px;
+        }
+
+        .up-links a {
+            margin-right: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="#">Laljan Mart</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">AboutMe</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#skills">Skills</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projects">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">ContactMe</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- About Section -->
+    <section id="about" class="container my-5">
+        <div class="d-flex align-items-center">
+            <div class="col-md-4">
+                <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxAQEA8QEBIPDw8PDw8NDQ8PDxAPDQ0NFREWFhURFRUYHSggGBomGxUVITEhJSkrLi4uFx8zODMuNygtLisBCgoKDg0NFxAQGisdHR0tLS0tLS0tLS0tLS0tLS03LSstLS0tKy0tLSstLSsuLS0tLS0tLS0tLS0tLS0rLS0tLf/AABEIAKgBLAMBIgACEQEDEQH/xAAbAAABBQEBAAAAAAAAAAAAAAAEAAECAwUGB//EAD8QAAICAQIEAwYDBQUIAwAAAAABAgMRBCEFEjFRE0FhBiJxgZGhMlKxFELB0eFicoKi0iM0Q1OSsvDxFRYz/8QAGQEAAwEBAQAAAAAAAAAAAAAAAAECAwQF/8QAIhEBAQACAgICAwEBAAAAAAAAAAECERIhAzETQQQyUSKh/9oADAMBAAIRAxEAPwD2REkOhYIUbAzRIZgEcCaGchcwjRcSuUC3IwjDyrK3WFtDOIbLQKVJB0hzgKMB7LQDwBnpjT8MZwDlRxZMqBvANR1EXSHKlxZngDeCaMqiDgPkOIHwmM6w1wIuIchxB8hHlC3Aj4Y+RcVCgTVZcoFsIoVpyB40ZISpNGKQ1kERyVxZyqGlWXzaRXnJU2m6UvYrlIIdTfQrlSy5Yiyh2yDgExqL+RJYC5aExtZU4FbgaU6ip1DmZXAB4YvCD/CJKkfyD4wMaSaoDlUT8MXyHPG6SKJDpDkNEGNgtwLlDQ2paItF7iVtEqVCJNEcCMwsiEANkXMPgbAEXN5d+g8Zp9N92vmgTX5UeZbOLTT+wNwe1tOL65Yw1kyLKqbOZJ+e6a9UWsQRbG5UOxOQBCUEQcSxyIAFbgQcS9og0AUyRDmLnEg4D2mxCU2Mrn0JcglS30H0XaDjkrcQmECbrz5C5aPiHhMu5dsj8uCyM/Jk2rkDcmeiIODDlgZwROz0B8MXhBvIhnBD2NAvDFyhbrISqDY0H5RYLuQbAbDeQ6QyJI2ZHwPgQh6JBogyciDIqog0QwWMjglaOBsE8DYAItEWizAzQEouhzRku6f1MXSScLPjv8zfwZGup5JZ8k8/JjNXa/NbPmb2NGu9YWWk+XJkTn1+KX1wKd+79Itf0Hoq19PqYzzjOzxuTbMaq51rlX45dX2fVmzDLSb2bSyFmiRyJMlyiURA6QzRNFEtXXnGcvtFOX6EqSFlEpRK5bdWl8XgAk0hL0B7NdVHrZWv8cc/QGnxqlfhbm/7K2+4AfIhO6MVmTUV3bxuZc+KuXROHpHHN9Zf6Suubzzfhf5sOy3Hxn+mwaG2k7nL8MdvzzzGP06v7F1Me+/rjC+RVpa8tNxn6StlmXyj0X2C2hU4i4obOBnkrkI1nioTsRQyDyPRbXSuIeOyiWSLTHqJtq6VxF3FTyNyseoXbo67S5Myq7QiGoHKLB6YmwValFkbUyuRaTZFkskRUzDDjMkzMYfA+ACAiXKNygEWs/oYvENQ/DlGSzJNwk/Tv+n1NtxA9bps+8lnbE4/mj/MYcctQ0++6f0LqdVum/V/PyIXRipyx05mov0Ixgn3NZJpnle2pQ0vee8n0XX5B1GolzKU5Yj05fJR+CMXxGljOPh1+BbRqY9GsvvJthcRK6uKTWU009008porvnGEXKTSiurexRwvUc0VFtcy2Uej5fLHc4b2346r7PBqbdVTanJP3bLPPHdLoYWVrOxvE/bCOcQXOstY6Ra8m+/wBbva66S5dNVGEmlzTl/tJt+iwkl9TntDoud5bWO2Wmzp9Dw/C2ithNNdAV+23b2X3b/uqTivpHCC9P7Op7zlKT9Zp/qzY0ujy0sxX9+OPujSWkx5NevLGxfzKkRb/GRRwWK6Rb+HL/rC4aBL9x/Pw3/MM8Ndqpf4UmOoR7Rj8F/IrSNh4U42wl6ZDNPCK61pereftgnVTjdNv9CxxJtORJyRFsjgTIUXMLAzItgDuKINITZFgDuKItDNkXIZHaQ2xHmG5gI8LSzxjOVo/jFGOleQWraecgUriidoydLpeIxez6h8Zp9DhnfgL0nGHF7vYNB1zEA6PiEZrruGpiBxCEAIQhACGwOIAB13Da7MvCU/KaWHn17gVXCXmXNywhHz68wBx32pjXLw65RTXV5Tk36Iw7uOWT/FKT9GzXGVGVjrp8LoWXJvCW75lFfYB12g01dfizsdVWMqbknzekY4yzk9Zxaag1zPfrv1MHV8Ust5Y2NyVa5a028RXp2HbZ9jHGVu8W9peePg6ZWV0/vTlLFtvxx+GPojnG/IirOxdVXkxtb4wbw2zDWeh2OiuTiuV/A5CijzRs8Llv1x/Mme1ZenTVz5l2fmn0f9S6q5x2Wf7r3KdJBz2S95YyvJr8yZsabSqK33eMZe+F2L3piqjHn/AK7F1dWOuG++C5IRNuzkVtDOJYyLRJqnEg4l/KNygYdxINBLRW8CChoiwhxRCURbMO0RwWTaB7dTGPVjl2SfKLlKI6+D8y6N8X5ofY6YquE7TIjqcFi1RpKmtCVxTO4FleVStKiRM7Sl2lErCp2FSBp6bWyi9mbmj4+1hM5CNhNWhcZRt6JpuLwl5h8L4vo0eY16xrow/S8anHzJ4UuT0PI5zeg44pdTUXEI9ydUco0APjFqhp75tuKjVN80VmS26pEFxCJO7w7oOFijOEsc0ZbxlhppNea2BUs328dhw9WWx1nJPm5PDrl73I68vD7POX9QuVkl1R68pJLCxhLCXkl2Mbi3A6L03yquzylFJJv1Qcsp6P8Axb28vvsyBTpydBxXhFlMnGUcdn1jJd0zLnS0HPftXx/wLTRhm/w7lliMku2fNGRDruaFCxuPjtPLXTep0HLJNLK+xZHQTdnLCL7rZ4x6vy/qQ4Jx1RbrsWYPbK3+GUdVTq4uKcGnHyx0ForlV/DdJ4UEm8yaWd8peiC+YAeqIPVMWqXKNFzG5zMeoYlqg40c40+YXMZ8dUT/AGonVVygzmKbtSo9TO1PEkuhkajVykXj47UZeWRp6rinYBevl3AnIhKw2njkY3yWtSHEZFkuJ7bmFLUpFE78ivilOeWxp6nirfQy79TKXmQckDWWF44Sek5Z2+03Y+5ZHVSXmwdMi5l6iOy5iqc2iuNo1lmTj07dpftDF+1Ac5FUrColpftAztMrxh1qjSVNaasJeIZ8dQmWRtKLYzxB1aCc4/OVIi1pUappmrRxF9zmVYX1Xj47Ra6qvW58wunXNeZyld4VVqmHCFydjRxHPUNruTOQo1WQ/T6trzM741TN0F0IyTjJKUX5NJozL/Z3TT6c0H2TzHPzyShrwDUcZlO2Gn0/K7JylGVkt66eWPM9v3pYTws9U89HjLKSe3R47lf1czx7Q10TcJPlxX4qn6bpLHq1j5g1Vc4x9+LSa2ztJL1XkbHA9FO/X89izCiNtj5pxssnqIzdSlbt1ypSiksRUY4xnfpOM8MhPLSSl548zObk6b5zHlquB0SfMs9zptM5Qw4trp8H6NeYA9JyyNbh+6x59F6+hUZ5CatdnaS5X/lYRKeASdfYlCXl09P3fl2NZf6wyx/i2VpHxSmyLW/kQ5zSSMbbPYp24BrtUyi28EsuHMS3V85lMrkC2XAll49EOs1IJZqGwWVxX4hWi2K5xp2gc7ymV4aPYqVxDxQXxRnYVotivGJJtgKsFLXJbE3o52nzkHaDymVuw5tOvYiywHlMhKZW5BotpymVSkQlIi5FSCp+KWQ1LQI399l3Z1/CeC6fS1Q1PEIylOzejSPbEfzWLv8A2X81nZO3RSW9Rj6a5zfLFOUvyxTlL6I0P/j79nKq2CfR2QlWn/1YNGft464uNFNVMOkYxSSS+CwjjuM8eu1FsrLJZb+SivJJdifmXPBt0K0kl+OdNa7zurf+WLcvsD6jiGlqyuey6S/5aVcPlKWW/ojmqKbbZKME5Sfln+L2Row9mdTnMoTx2hFzf2F8tvUVPBjj3k0dJxumxpKFkHJ4T8RTw30yuVfY0a7jO0HA7IZcabtusp1ySj82kkGw0sl+OyipLq56ip4/wwbk/kjXC2ftWPmmOVnx4/8ABtV+A2nVmHPiuir2lZddjr4VahH5Sk8v6IpftZTnFelyvLntsc39Gl9gvlxLH8byV1yvUlht4fXEnFtdsrc2vZvhsKa+aGUpxSaz7uE3vjyeWziNLr/EXOoSqX5ZZyn5rfqvX19Dd4f7QTrr8NpTj1TbalH0z2FcZnOUEzy8VvjyvTrtNXBTslGMY8zTk4xSc5JdXjqxtTvgH4Zq1OlTWMvKaXk+wZ1ivgzCz6bS77c9r9N1fYD0zae3mdDXUpKSl+bBXRwyNTU03Lr1S6CkVaGthnfo2s/MpW+/ya7+nxNbiNaa5vT/ANmPbJL3vLHvfbDNJ2yvRTtxFtbpdUzMtvJcQujlOLznrgzbLTbGajDO7q6dpRZaD2XlErStIXTsyUSkRcitjgSc8kJyGk8FEpjIpSK2xMixkfJXO1Ipu1KXQBstbFacxE3avsCStZEbBK2pKRVzHomp0XDNI1Kuvx7c+6rJynXX64e36klfXdGc61GE1HmcVhNY/gYcnTxcDptDdas11W2LvXXOa+qQRH2e1cv+DKGfO2UKf+9o37+K2NJKyUVHEeVbcq9MFU+LTe0pOXq+vz7jm03QKn2Pte9l+lrXniVlkl8lHD+obpvZbRV736m27+xTV4S+Dcm3+gJbr59wZ6tvqyuNLcbX/wBi0ek/3PS1prpZY+a1/Pr9zjPaDj9uptdljy+iS2jGPZIF4lJq2SXSXvr59fvkClVKXkYZaldOMtnRne2NhvoOtHPsFUaOT8v4GVraShYQa3Wc987l8NVZHpKS+bD1oZ+aS+O/0SHhw9p7xcn/AGlhf+fQOSpjQ8dXfPZSnJdstohfRYvxtQz+dqL+j3YbKlP8VzivyVbpfJNL7ijpKV0i5d3J4bfwXT6mmOGd9Rnn5PHj7oWhxW0YO6XeWVD5RW7+f0NHSW6yP/5qFS9OSD++7J1zwsRxFdopRX26ko2YNZ+Lv9qxv5/H9I1KLrWv9s4uf5o495euPMtVhmw1BfGw6sMeM08/y5887lrW2nTq5R/DKSz1xJpM6Ov2rXhxTg3YlhvZQfqccpk1MMsJfZY53H07l8dp5eZS96X7mHlSx0ZbpOP1SqxY2prO3K2pfDH8ThFYS8bBHwxfzZOsXHWoOLjzfkecNds9zInq5Yay8dvIylqWPK8OGhztFTnkGtkVSvZVKbYaGymxRIYZJIeykSkOsEGiuyYlJTaKZtFcpMouuSKJOy5IB1Gqz0KbrmysVokRciOSTaISkidxWk4DOaQP4xNVp75IyzkVMduou1be7ZRLU9uoNbPYpql9ssmtoLt1efe6PpJeXoyLvYFCe7Xk9iyvOMBMtwXHVXu99xlLJGFTbCIUiuRzBXbplLEnhcq3cmopIo8Wlecpf3Y4X1eAvi1OKMv80cfU59TJx8cz7qs/Nlh/mNeOvrj0qz/es/hgd8Yx+GqlfFOX8UZkZZIyZr8OE+mV8/kv2058Wsa25I+sY4f6gk7pPq2/0B1IXMXjhjPUZZeTK+6uUyyNwLzCUjSM2lC3JNTM+uwujaUVGKRdVYCQ3LYpjS0YTLFMGpTYSqmBE7CLmTVDLIacAHUi6DbLVpwmqqK3eCcqqBlUyDQVdxGmOzaEp1T3TRlya8Q+CLmkU6zVwi8JgT18Q3BoZOzJRZLHUDfEkB6rXthzkHGjNTr0tkAW3ZALbMkVbgnmriI8YeVj8gjSVQksstnCKMr5fpc8X2z1F9WDaizHQK18ttjL6hLvsWaT8RsJhnALW9wuMhZURt6pYS+5XFYg3+b3V/H+AhBb03k7Qpr3NKmnphdvqIRG1yDdNo3u8bllllFCzdNKXXw4+9Z9F0+LEIeGPK6qfJlwm4weN8YV6jCEXCuLy845py8m8dF6epkNjCOrGSTUceWVyu6nCQ8pCEUk2RZEIID8wzYhFEeNhbGYhDhNHQ77GtXp8iENAmFSXXAPq+IQh03YwiMsrFYwDPjb8gvQcZivxiEYXOtpjFHEPaFJ+4ZWo47OSxkQivY0zLb5N5bYbob5+TYhEZdQ8fYub/MDaia8hCM520vRqI5K9ZHCEIN9j6ZjmxTkIRpWcX0avlRJa/LEIjjFbqzU3JxAcbDiJnR27Dc+4ZGewhDyKP/Z" alt="" class="img-fluid rounded-circle" width="400px">
+            </div>
+            <div class="col-md-8 p-3">
+                <p>Hello there, my name is laljan basha and I'm a React developer with expertise in React, Node.js, SQL with 2 years of experience.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="container my-5">
+        <div class="row">
+            <div class="col-md-4">
+                <table class="table table-bordered">
+                    <thead class="table-dark">
+                        <tr>
+                            <th>Frontend</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>HTML</td>
+                        </tr>
+                        <tr>
+                            <td>CSS</td>
+                        </tr>
+                        <tr>
+                            <td>JavaScript</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-md-4">
+                <table class="table table-bordered">
+                    <thead class="table-dark">
+                        <tr>
+                            <th>Backend</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Node.js</td>
+                        </tr>
+                        <tr>
+                            <td>Express.js</td>
+                        </tr>
+                        <tr>
+                            <td>Java</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-md-4">
+                <table class="table table-bordered">
+                    <thead class="table-dark">
+                        <tr>
+                            <th>Servers</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>MySQL</td>
+                        </tr>
+                        <tr>
+                            <td>Oracle</td>
+                        </tr>
+                        <tr>
+                            <td>MongoDB</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+
+<section id="projects" class="container my-5">
+    <div class="row">
+        <div class="col-12 col-sm-6 col-md-4 mb-4">
+            <div class="card h-100">
+                <img src="https://i.ytimg.com/vi/TwYKwaEjJd4/maxresdefault.jpg" class="card-img-top"
+                    alt="Portfolio Project Image" style="height: 200px; object-fit: cover;">
+                <div class="card-body">
+                    <h5 class="card-title">Portfolio Project</h5>
+                    <p class="text-center">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim reprehenderit quisquam corrupti
+                        obcaecati voluptatem quia soluta maxime distinctio impedit temporibus?</p>
+                    <div class="P_links d-flex justify-content-between">
+                        <a href="#" class="btn btn-primary">Code</a>
+                        <a href="#" class="btn btn-secondary">Live</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-sm-6 col-md-4 mb-4">
+            <div class="card h-100">
+                <img src="https://cdn.pixabay.com/photo/2017/03/13/17/26/ecommerce-2140603_640.jpg" class="card-img-top"
+                    alt="E-commerce Project Image" style="height: 200px; object-fit: cover;">
+                <div class="card-body">
+                    <h5 class="card-title">E-commerce Project</h5>
+                    <p class="text-center">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim reprehenderit quisquam corrupti
+                        obcaecati voluptatem quia soluta maxime distinctio impedit temporibus?</p>
+                    <div class="P_links d-flex justify-content-between">
+                        <a href="#" class="btn btn-primary">Code</a>
+                        <a href="#" class="btn btn-secondary">Live</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-sm-6 col-md-4 mb-4">
+            <div class="card h-100">
+                <img src="https://i.ytimg.com/vi/gXEI8Oy0EMc/maxresdefault.jpg" class="card-img-top"
+                    alt="Amazon Clone Project Image" style="height: 200px; object-fit: cover;">
+                <div class="card-body">
+                    <h5 class="card-title">Amazon Clone Project</h5>
+                    <p class="text-center">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim reprehenderit quisquam corrupti
+                        obcaecati voluptatem quia soluta maxime distinctio impedit temporibus?</p>
+                    <div class="P_links d-flex justify-content-between">
+                        <a href="#" class="btn btn-primary">Code</a>
+                        <a href="#" class="btn btn-secondary">Live</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-sm-6 col-md-4 mb-4">
+            <div class="card h-100">
+                <img src="https://www.freshbooks.com/wp-content/uploads/2022/02/expense-tracking.jpg"
+                    class="card-img-top" alt="Expense Tracker Project Image" style="height: 200px; object-fit: cover;">
+                <div class="card-body">
+                    <h5 class="card-title">Expense Tracker Project</h5>
+                    <p class="text-center">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim reprehenderit quisquam corrupti
+                        obcaecati voluptatem quia soluta maxime distinctio impedit temporibus?</p>
+                    <div class="P_links d-flex justify-content-between">
+                        <a href="#" class="btn btn-primary">Code</a>
+                        <a href="#" class="btn btn-secondary">Live</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <!-- Contact Section -->
+    <section id="contact" class="container my-5">
+        <form>
+            <h1>Contact Me</h1>
+            <input type="text" placeholder="Your Name">
+            <input type="email" placeholder="Your Email">
+            <textarea placeholder="Your Message"></textarea>
+            <button type="submit" class="btn btn-primary" style="width: 10vw;">Submit</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer class="container text-center my-4">
+        <p class="social-Links">Connect with me on:</p>
+        <div class="up-links">
+            <a href="https://github.com/harikrishna87"><i class="fa-brands fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/126a29268/"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://www.facebook.com/profile.php?id=61557491190669"><i class="fa-brands fa-facebook"></i></a>
+        </div>
+    </footer>
+</body>
+
+</html>
